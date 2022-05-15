@@ -1,1 +1,31 @@
+Pairs:
 
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    pair<int,string> pa;
+    pa=make_pair(2,"Rahul");
+    pa={3,"Vijay"};
+    // this is a copy
+    // pair<int,string> p1=p;
+    // this is going to update real also...
+    pair<int,string> &p1=pa;
+    p1.first=4;
+    cout<<pa.first<<" "<<pa.second<<endl;
+    cout<<p1.first<<" "<<p1.second<<endl;
+    
+    pair<int,int> p[3];
+    p[0]={1,4};
+    p[1]={2,5};
+    p[2]={3,6};
+    swap(p[0],p[2]);
+    for(auto i=0;i<3;i++){
+        cout<<p[i].first<<" "<<p[i].second<<endl;
+    }
+    
+    
+    return 0;
+}
