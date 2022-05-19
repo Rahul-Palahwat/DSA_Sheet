@@ -45,6 +45,7 @@ public:
 };
 
 7th line
+1st approach..
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
@@ -73,3 +74,35 @@ public:
         return j;
     }
 };
+2nd Approach..
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        int ans=0,j=1,prev=nums[0];
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]!=prev){
+                nums[j]=nums[i];
+                j++;
+                prev=nums[i];
+            }
+        }
+        return j;
+    }
+};
+3rd approach:
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        int prev=nums[0],i=1;
+        for(int j: nums){
+            if(j>prev){
+                nums[i++]=j;
+                prev=j;
+            }
+        }
+        return i;
+    }
+};
+
+8th line
+
