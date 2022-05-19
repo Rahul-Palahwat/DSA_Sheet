@@ -108,6 +108,7 @@ public:
 
 
 
+
 9th line
 
 class Solution {
@@ -149,3 +150,22 @@ public:
 };
 
 
+11th line
+
+class Solution{
+    public:
+    long long findMinDiff(vector<long long> a, long long n, long long m){
+    //code
+    int min=INT_MAX;
+    sort(a.begin(),a.end());
+    for(int i=0;i<n-m+1;i++){
+        int temp=a[i+m-1]-a[i];
+        if(temp<min){
+            min=temp;
+        }
+        
+    }
+    return min;
+    
+    }   
+};
